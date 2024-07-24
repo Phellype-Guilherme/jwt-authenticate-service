@@ -1,0 +1,6 @@
+br\com\itau\jwt\authenticate\infra\components\claims\ClaimValidatorComponent.class
+br\com\itau\jwt\authenticate\app\controller\JwtAuthenticateController.class
+br\com\itau\jwt\authenticate\infra\components\claims\impl\ClaimValidatorComponentComponentImpl.class
+br\com\itau\jwt\authenticate\infra\utils\Utils.class
+br\com\itau\jwt\authenticate\JwtAuthenticateApplication.class
+br\com\itau\jwt\authenticate\domain\service\JwtValidationService.class
