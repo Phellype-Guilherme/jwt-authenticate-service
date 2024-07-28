@@ -95,6 +95,8 @@ he project includes unit and integration tests to ensure the functionality and r
 ### METHOD GET:
 **/jwt/verify**: Checks the validity of a JWT. Requires an Authorization header with a JWT token with Bearer flag.
 
+# README
+
 This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, test, and API endpoint details.
 
 
