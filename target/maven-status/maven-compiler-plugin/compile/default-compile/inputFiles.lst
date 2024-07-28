@@ -1,9 +1,9 @@
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\infra\components\validation\impl\JwtValidatorComponentImpl.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\JwtVerificationApplication.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\domain\exceptions\JwtInvalidException.java
+C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\domain\services\JwtVerifyService.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\domain\exceptions\GlobalExceptionHandler.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\infra\components\validation\JwtValidatorComponent.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\infra\utils\Utils.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\infra\config\SwaggerConfig.java
 C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\app\controller\JwtVerificationController.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\main\java\br\com\itau\jwt\verification\domain\service\JwtVerifyService.java
