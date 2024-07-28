@@ -14,6 +14,8 @@ This application exposes a web API that receives a JWT as a parameter and checks
 - **Auth0 JWT** - JWT token handling
 - **JUnit 5** - these unitary and integration
 - **Mockito** - mocking in tests
+- **AWS EC2** - for hosting the application
+- **AWS VPC** - for network isolation and security
 
 ## Functionalities
 Checking the JWT structure.
@@ -95,10 +97,37 @@ he project includes unit and integration tests to ensure the functionality and r
 ### METHOD GET:
 **/jwt/verify**: Checks the validity of a JWT. Requires an Authorization header with a JWT token with Bearer flag.
 
+## Endpoint in AWS
+### METHOD GET:
+The application is deployed and running on an AWS EC2 instance. The API endpoint is available at:
+
+http://ec2-15-229-21-44.sa-east-1.compute.amazonaws.com:8080/jwt/verify Requires an Authorization header with a JWT token with Bearer flag.
+
+## Deployment
+
+The project is configured to be deployed to an AWS EC2 instance using GitHub Actions. The deployment process is triggered on every push to the main branch. The following GitHub Actions workflow is used deploy.yaml
+
+
+## Steps for Deployment
+1. Ensure you have an EC2 instance running and accessible.
+2. Add your EC2 instance SSH key to the GitHub Secrets with the name EC2_SSH_KEY.
+3. Push changes to the main branch to trigger the deployment process.
+
+
+## AWS Technologies Used
+- Amazon EC2: Used to host the application, providing scalable computing capacity.
+- Amazon VPC: Used for network isolation and security, ensuring the application's resources are securely accessible and managed.
+
+## Contributing
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-branch).
+3. Make your changes.
+4. Commit your changes (git commit -m 'Add some feature').
+5. Push to the branch (git push origin feature-branch).
+6. Open a pull request.
 # README
 
-This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, test, and API endpoint details.
-
+This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, tests, API endpoint details, and deployment information.
 
 
 
