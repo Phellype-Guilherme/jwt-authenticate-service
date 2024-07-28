@@ -127,7 +127,7 @@ The project is configured to be deployed to an AWS EC2 instance using GitHub Act
 6. Open a pull request.
 # README
 
-This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, tests, API endpoint details, and deployment information.
+This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, tests, API endpoint details, and deployment information..
 
 
 
