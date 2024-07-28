@@ -2,8 +2,26 @@ package br.com.itau.jwt.verification.infra.utils;
 
 import java.util.stream.LongStream;
 
+/**
+ * Utility class for various helper methods.
+ *
+ * <p>This class provides utility methods for use throughout the application.</p>
+ *
+ *
+ * @author Phellype Guilherme
+ */
 public class Utils {
 
+    /**
+     * Checks if a given number is prime.
+     *
+     * <p>This method uses an optimized algorithm to determine if the given number is a prime number.
+     * It first handles small numbers and checks for divisibility by 2 and 3.
+     * For larger numbers, it uses a stream to test divisibility by potential factors up to the square root of the number.</p>
+     *
+     * @param number the number to be checked
+     * @return true if the number is prime, false otherwise
+     */
     public static boolean numberIsPrime(int number) {
 
         if (number <= 1) return false;
