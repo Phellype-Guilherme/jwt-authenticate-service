@@ -1,22 +1,24 @@
-name: Push-to-EC2
+name: jwt-verification-service - Deploy Ec2 
+
 on:
   push:
-    branches:
-      - main
-jobs:
-  deploy:
-    name: Deploy to EC2
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the files
-        uses: actions/checkout@v3
+    branches: [ "main" ]
 
-      - name: Copy files with SSH
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "./"
-          REMOTE_HOST: "ec2-15-228-41-74.sa-east-1.compute.amazonaws.com"
-          REMOTE_USER: "ec2-user"
-          TARGET: "/home/ec2-user"
+jobs:
+  EC2-Deploy:
+    runs-on: ubuntu-latest
+    environment: 
+      name: AWS
+
+    steps:
+    - uses: actions/checkout@v3 
+    - name: Compile
+      run: mvn clean package 
+
+    - id: deploy
+      uses: bitovi/github-actions-deploy-docker-to-ec2@v1.0.0 #Deploy contêineres Docker EC2.
+      with:
+        checkout: false
+        aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}} 
+        aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}} 
+        aws_elb_app_port: 8080
