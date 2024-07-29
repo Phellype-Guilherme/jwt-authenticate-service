@@ -102,7 +102,7 @@ he project includes unit and integration tests to ensure the functionality and r
 The application is deployed and running on an AWS EC2 instance. The API endpoint is available at:
 
 example URL: 
-http://ec2-15-228-99-109.sa-east-1.compute.amazonaws.com:8080/jwt/verify
+http://ec2-18-228-6-195.sa-east-1.compute.amazonaws.com:8080/jwt/verify
 Requires an Authorization header with a JWT token with Bearer flag.
 
 ## Deployment
