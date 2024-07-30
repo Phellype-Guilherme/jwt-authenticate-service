@@ -25,7 +25,7 @@ Checking the JWT structure.
 - Validation of the `Seed` claim to be a prime number.
 
 ## Architecture
-The project architecture follows the hexagonal architecture pattern (Ports and Adapters). This architecture promotes a clear separation between business logic (domain) and infrastructure, facilitating code testability and maintenance.
+The project architecture follows the principles of hexagonal architecture (Ports and Adapters) and clean architecture. This approach promotes a clear separation between business logic (domain) and infrastructure, facilitating code testability, maintainability, and adaptability to changes. By doing so, we ensure that business rules are isolated from external dependencies, making the application more robust and flexible for future developments.
 
 ## Packages
 
@@ -101,7 +101,9 @@ he project includes unit and integration tests to ensure the functionality and r
 ### METHOD GET:
 The application is deployed and running on an AWS EC2 instance. The API endpoint is available at:
 
-http://ec2-15-229-21-44.sa-east-1.compute.amazonaws.com:8080/jwt/verify Requires an Authorization header with a JWT token with Bearer flag.
+example URL: 
+http://ec2-18-228-203-125.sa-east-1.compute.amazonaws.com:8080/jwt/verify
+Requires an Authorization header with a JWT token with Bearer flag.
 
 ## Deployment
 
@@ -127,7 +129,7 @@ The project is configured to be deployed to an AWS EC2 instance using GitHub Act
 6. Open a pull request.
 # README
 
-This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, tests, API endpoint details, and deployment information.
+This README provides a clear overview of the project, including the technologies used, functionalities, architecture, packages, main classes, resiliency settings, execution instructions, tests, API endpoint details, and deployment information..
 
 
 
