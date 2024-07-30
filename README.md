@@ -25,7 +25,7 @@ Checking the JWT structure.
 - Validation of the `Seed` claim to be a prime number.
 
 ## Architecture
-The project architecture follows the hexagonal architecture pattern (Ports and Adapters). This architecture promotes a clear separation between business logic (domain) and infrastructure, facilitating code testability and maintenance.
+The project architecture follows the principles of hexagonal architecture (Ports and Adapters) and clean architecture. This approach promotes a clear separation between business logic (domain) and infrastructure, facilitating code testability, maintainability, and adaptability to changes. By doing so, we ensure that business rules are isolated from external dependencies, making the application more robust and flexible for future developments.
 
 ## Packages
 
