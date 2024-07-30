@@ -1,7 +1,7 @@
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\infra\utils\UtilsTest.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\app\controller\JwtVerificationControllerIntegrationTest.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\app\controller\JwtVerificationControllerTest.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\domain\exceptions\GlobalExceptionHandlerTest.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\infra\components\validation\impl\JwtValidatorComponentImplTest.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\domain\services\JwtVerifyServiceTest.java
-C:\Users\MARCOS\Desktop\jwt-authenticate-service\src\test\java\br\com\itau\jwt\verification\JwtVerificationApplicationTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\JwtVerificationApplicationTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\app\controller\JwtVerificationControllerTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\infra\components\validation\impl\JwtValidatorComponentImplTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\infra\utils\UtilsTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\app\controller\JwtVerificationControllerIntegrationTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\domain\exceptions\GlobalExceptionHandlerTest.java
+C:\Users\MARCOS\Desktop\jwt-verification-service\src\test\java\br\com\itau\jwt\verification\domain\services\JwtVerifyServiceTest.java
