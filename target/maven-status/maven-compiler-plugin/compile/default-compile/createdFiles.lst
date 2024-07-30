@@ -1,9 +1,0 @@
-br\com\itau\jwt\verification\infra\components\validation\JwtValidatorComponent.class
-br\com\itau\jwt\verification\infra\config\SwaggerConfig.class
-br\com\itau\jwt\verification\app\controller\JwtVerificationController.class
-br\com\itau\jwt\verification\JwtVerificationApplication.class
-br\com\itau\jwt\verification\infra\components\validation\impl\JwtValidatorComponentImpl.class
-br\com\itau\jwt\verification\domain\exceptions\JwtInvalidException.class
-br\com\itau\jwt\verification\infra\utils\Utils.class
-br\com\itau\jwt\verification\domain\exceptions\GlobalExceptionHandler.class
-br\com\itau\jwt\verification\domain\services\JwtVerifyService.class

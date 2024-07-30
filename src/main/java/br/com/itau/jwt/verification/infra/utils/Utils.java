@@ -10,7 +10,16 @@ import java.util.stream.LongStream;
  *
  * @author Phellype Guilherme
  */
-public class Utils {
+public final class Utils {
+
+    /**
+     * Private constructor to prevent instantiation.
+     *
+     * <p>Throws {@link UnsupportedOperationException} to indicate that this class cannot be instantiated.</p>
+     */
+    private Utils() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
 
     /**
      * Checks if a given number is prime.
