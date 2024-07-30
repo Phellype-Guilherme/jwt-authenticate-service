@@ -1,3 +1,4 @@
+[![Push-to-EC2](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/deployAWS.yml/badge.svg)](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/deployAWS.yml) [![SonarCloud](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/SonarCloudAnalys.yml/badge.svg)](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/SonarCloudAnalys.yml)
 # jwt-verification-service
 ## Description
 This application exposes a web API that receives a JWT as a parameter and checks whether it is valid according to the specified rules.
