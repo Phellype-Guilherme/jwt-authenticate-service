@@ -7,7 +7,6 @@ import java.util.stream.LongStream;
  *
  * <p>This class provides utility methods for use throughout the application.</p>
  *
- *
  * @author Phellype Guilherme
  */
 public final class Utils {
@@ -17,7 +16,7 @@ public final class Utils {
      *
      * <p>Throws {@link UnsupportedOperationException} to indicate that this class cannot be instantiated.</p>
      */
-    private Utils() {
+    Utils() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 

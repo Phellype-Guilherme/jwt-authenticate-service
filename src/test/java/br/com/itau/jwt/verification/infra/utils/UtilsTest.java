@@ -16,6 +16,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class UtilsTest {
 
     /**
+     * Tests that the {@link Utils} constructor throws {@link UnsupportedOperationException}.
+     */
+    @Test
+    void testUtilsConstructor() {
+        UnsupportedOperationException exception = assertThrows(UnsupportedOperationException.class, Utils::new);
+        assertEquals("This is a utility class and cannot be instantiated", exception.getMessage());
+    }
+
+    /**
      * Test for {@link Utils#numberIsPrime(int)} with prime numbers.
      * This test checks if the method correctly identifies prime numbers.
      */
@@ -61,5 +70,24 @@ class UtilsTest {
         assertFalse(Utils.numberIsPrime(-2));
         assertFalse(Utils.numberIsPrime(-3));
         assertFalse(Utils.numberIsPrime(-5));
+    }
+
+    /**
+     * Tests the conditions within the filter in {@link Utils#numberIsPrime(int)} method.
+     * <ul>
+     *   <li>Numbers that do not pass the filter</li>
+     *   <li>Numbers that are divisible by a number within the filter</li>
+     * </ul>
+     */
+    @Test
+    void testNumberIsPrimeWithFilterConditions() {
+
+        assertTrue(Utils.numberIsPrime(7), "7 should be prime"); // 7 % 6 == 1
+
+        assertTrue(Utils.numberIsPrime(11), "11 should be prime"); // 11 % 6 == 5
+
+        assertFalse(Utils.numberIsPrime(8), "8 should not be prime"); // 8 % 6 != 1 and 8 % 6 != 5
+
+        assertFalse(Utils.numberIsPrime(25), "25 should not be prime"); // 25 is divisible by 5
     }
 }
