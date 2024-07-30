@@ -1,7 +1,9 @@
 [![Push-to-EC2](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/deployAWS.yml/badge.svg)](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/deployAWS.yml) [![SonarCloud](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/SonarCloudAnalys.yml/badge.svg)](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/SonarCloudAnalys.yml)
 # jwt-verification-service
 ## Description
-This application exposes a web API that receives a JWT as a parameter and checks whether it is valid according to the specified rules.
+This application exposes a REST FULL API that receives a JWT in the authorization header and checks if it is valid according to the specified rules.
+
+![image](https://github.com/user-attachments/assets/6045a677-4903-4a34-87a3-28328ee475ea)
 
 
 ## Technologies Used
@@ -17,6 +19,7 @@ This application exposes a web API that receives a JWT as a parameter and checks
 - **Mockito** - mocking in tests
 - **AWS EC2** - for hosting the application
 - **AWS VPC** - for network isolation and security
+- **Sonar cloud** -  Automatically analyze code
 
 ## Functionalities
 Checking the JWT structure.
@@ -49,8 +52,6 @@ The project architecture follows the principles of hexagonal architecture (Ports
 The service uses Resilience4j to provide resilience with the following configurations:
 
 - **Rate Limiting**: Limits the number of requests allowed per second.
-- **Circuit Breaker**: Opens the circuit after a certain number of failures, preventing subsequent calls until the circuit is closed again.
-- **Retry**: Retries to execute the method in case of failure, up to a maximum number of attempts.
 
 
 The settings are defined in the `application.properties` file.
@@ -89,22 +90,25 @@ he project includes unit and integration tests to ensure the functionality and r
 
 ## Test Coverage
 - `JwtVerificationControllerTest`: Unit tests for the controller to verify different JWT scenarios.
-- `JwtVerifyServiceTest`: Unit tests for the service to validate JWT logic and fallback mechanism.
+- `JwtVerifyServiceTest`: Unit tests for the service to validate JWT logic.
 - `JwtValidatorComponentImplTest`: Unit tests for the JWT validator component implementation.
 - `GlobalExceptionHandlerTest`: Unit tests for the global exception handler.
 - `UtilsTest`: Unit tests for utility functions.
 - `JwtVerificationApplicationTest`: Integration test to ensure the Spring context loads and beans are correctly instantiated.
-## Endpoints API
-### METHOD GET:
-**/jwt/verify**: Checks the validity of a JWT. Requires an Authorization header with a JWT token with Bearer flag.
 
-## Endpoint in AWS
-### METHOD GET:
-The application is deployed and running on an AWS EC2 instance. The API endpoint is available at:
 
-example URL: 
-http://ec2-18-228-203-125.sa-east-1.compute.amazonaws.com:8080/jwt/verify
-Requires an Authorization header with a JWT token with Bearer flag.
+## SonarCloud Analysis
+This project uses SonarCloud to continuously inspect the code quality. SonarCloud is integrated via GitHub Actions to automatically analyze the code on every push to the `main` and `release/develop` branches.
+
+## Viewing SonarCloud Results
+After setting up the workflow, every push to the main and release/develop branches will trigger a SonarCloud analysis. The results can be viewed on your SonarCloud project dashboard.
+![image](https://github.com/user-attachments/assets/d718d4ef-eb1e-4dd9-b5d3-3b9954a3d633)
+
+## Benefits of SonarCloud
+Code Quality: Automatically analyze code quality and get detailed feedback on bugs, code smells, and vulnerabilities.
+Continuous Inspection: Ensure that every code change is analyzed and meets the quality standards.
+Maintainability: Identify potential issues early and maintain a high standard of code maintainability.
+
 
 ## Deployment
 
@@ -120,6 +124,18 @@ The project is configured to be deployed to an AWS EC2 instance using GitHub Act
 ## AWS Technologies Used
 - Amazon EC2: Used to host the application, providing scalable computing capacity.
 - Amazon VPC: Used for network isolation and security, ensuring the application's resources are securely accessible and managed.
+
+## Endpoints API
+### METHOD GET:
+**/jwt/verify**: Checks the validity of a JWT. Requires an Authorization header with a JWT token with Bearer flag.
+
+## Endpoint in AWS
+### METHOD GET:
+The application is deployed and running on an AWS EC2 instance. The API endpoint is available at:
+
+example URL: 
+http://ec2-15-228-167-219.sa-east-1.compute.amazonaws.com:8080/jwt/verify
+Requires an Authorization header with a JWT token with Bearer flag.
 
 ## Contributing
 1. Fork the repository.
