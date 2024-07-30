@@ -57,6 +57,7 @@ public class JwtVerificationController {
             return new ResponseEntity<>(true, HttpStatus.OK);
         }
 
+        log.error("Invalid JWT");
         return new ResponseEntity<>(false, HttpStatus.UNAUTHORIZED);
     }
 }
