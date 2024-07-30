@@ -12,13 +12,13 @@ jobs:
           distribution: 'zulu'
           cache: maven
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn clean install && ls
 
       - name: jacoco-badge-generator
         id: jacoco
         uses: cicirello/jacoco-badge-generator@v2.3.0
         with:
-          jacoco-csv-file: /target/site/jacoco-aggregate/jacoco.csv
+          jacoco-csv-file: jwt-verification-service/target/site/jacoco-aggregate/jacoco.csv
 
       - name: Log coverage percentage
         run: |
