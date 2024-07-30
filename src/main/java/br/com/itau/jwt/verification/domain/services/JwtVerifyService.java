@@ -4,8 +4,6 @@ import br.com.itau.jwt.verification.domain.exceptions.JwtInvalidException;
 import br.com.itau.jwt.verification.infra.components.validation.JwtValidatorComponent;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,7 +11,6 @@ import org.springframework.stereotype.Service;
 /**
  * Service class for verifying JWT token.
  * This class provides the logic to validate JWT tokens according to specific rules.
- *
  *
  * @author Phellype Guilherme
  */
@@ -40,8 +37,6 @@ public class JwtVerifyService {
      * @return true if the token is valid according to the specified rules, false otherwise
      * @throws JwtInvalidException if the JWT is invalid
      */
-    @CircuitBreaker(name = "jwtVerificationService", fallbackMethod = "fallbackValidateJwt")
-    @Retry(name = "jwtVerificationService")
     public boolean validateJwt(String token) {
 
         try {
@@ -61,13 +56,8 @@ public class JwtVerifyService {
             return false;
 
         } catch (Exception e) {
-            log.error("Invalid JWT: {}",e.getMessage());
+            log.error("Invalid JWT: {}", e.getMessage());
             throw new JwtInvalidException("Invalid JWT");
         }
-    }
-
-    public boolean fallbackValidateJwt(String token, Throwable t) {
-        log.error("Fallback method triggered due to: {}", t.getMessage());
-        return false;
     }
 }

@@ -1,7 +1,0 @@
-br\com\itau\jwt\verification\app\controller\JwtVerificationControllerIntegrationTest.class
-br\com\itau\jwt\verification\domain\exceptions\GlobalExceptionHandlerTest.class
-br\com\itau\jwt\verification\domain\services\JwtVerifyServiceTest.class
-br\com\itau\jwt\verification\infra\components\validation\impl\JwtValidatorComponentImplTest.class
-br\com\itau\jwt\verification\app\controller\JwtVerificationControllerTest.class
-br\com\itau\jwt\verification\JwtVerificationApplicationTest.class
-br\com\itau\jwt\verification\infra\utils\UtilsTest.class

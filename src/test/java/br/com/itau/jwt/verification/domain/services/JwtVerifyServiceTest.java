@@ -77,18 +77,4 @@ class JwtVerifyServiceTest {
         assertThrows(JwtInvalidException.class, () -> jwtVerifyService.validateJwt(token));
         verify(jwtValidatorComponent, times(1)).validateJwtStructure(anyString());
     }
-
-    /**
-     * Test to verify fallback mechanism for JWT validation.
-     */
-    @Test
-    void testFallbackValidateJwt() {
-        String token = "Bearer eyJhbGciOiJzI1NiJ9.dfsdfsfryJSr2xrIjoiQWRtaW4iLCJTZrkIjoiNzg0MSIsIk5hbrUiOiJUb25pbmhvIEFyYXVqbyJ9.QY05fsdfsIjtrcJnP533kQNk8QXcaleJ1Q01jWY_ZzIZuAg";
-        Throwable throwable = new RuntimeException("Service unavailable");
-
-        boolean result = jwtVerifyService.fallbackValidateJwt(token, throwable);
-
-        assertFalse(result);
-    }
-
 }

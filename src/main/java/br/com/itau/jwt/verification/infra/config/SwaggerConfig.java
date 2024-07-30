@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    private static final String securitySchemeName = "JWT Bearer";
+    private static final String SECURITY_SCHEME_NAME = "JWT Bearer";
 
     /**
      * Configures the OpenAPI documentation for the JWT verification service.
@@ -33,12 +33,12 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(new Info().title("JWT verification service").version("Swagger")
                         .license(new License().name("license").url("")))
-                .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
+                .addSecurityItem(new SecurityRequirement().addList(SECURITY_SCHEME_NAME))
                 .components(
                         new Components()
-                                .addSecuritySchemes(securitySchemeName,
+                                .addSecuritySchemes(SECURITY_SCHEME_NAME,
                                         new SecurityScheme()
-                                                .name(securitySchemeName)
+                                                .name(SECURITY_SCHEME_NAME)
                                                 .type(SecurityScheme.Type.HTTP)
                                                 .scheme("bearer")
                                                 .bearerFormat("JWT")

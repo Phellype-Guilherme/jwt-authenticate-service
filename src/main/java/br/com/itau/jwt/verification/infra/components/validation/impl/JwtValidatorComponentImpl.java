@@ -26,6 +26,8 @@ public class JwtValidatorComponentImpl implements JwtValidatorComponent {
 
     private static final Pattern NAME_PATTERN = Pattern.compile("^[a-zA-Z\\s]{1,256}$");
     private static final Set<String> VALID_ROLES = Set.of("Admin", "Member", "External");
+    private static final Set<String> VALID_ClAIMS = Set.of("Name", "Role", "Seed");
+
 
     /**
      * Validates the structure of the JWT token.
@@ -108,7 +110,7 @@ public class JwtValidatorComponentImpl implements JwtValidatorComponent {
     @Override
     public boolean validateNumberOfClaims(Map<String, Claim> claimMap) {
 
-        return claimMap.keySet().equals(Set.of("Name", "Role", "Seed"));
+        return VALID_ClAIMS.equals(claimMap.keySet());
 
     }
 }
