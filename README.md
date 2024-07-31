@@ -1,7 +1,7 @@
 [![Push-to-EC2](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/deployAWS.yml/badge.svg)](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/deployAWS.yml) [![SonarCloud](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/SonarCloudAnalys.yml/badge.svg)](https://github.com/Phellype-Guilherme/jwt-verification-service/actions/workflows/SonarCloudAnalys.yml)
 # jwt-verification-service
 ## Description
-This application exposes a REST FULL API that receives a JWT in the authorization header and checks if it is valid according to the specified rules.
+This application exposes a REST API that receives a JWT in the authorization header and checks if it is valid according to the specified rules.
 
 ![image](https://github.com/user-attachments/assets/6045a677-4903-4a34-87a3-28328ee475ea)
 
